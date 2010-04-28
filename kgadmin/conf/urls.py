@@ -50,5 +50,5 @@ urlpatterns += patterns('django.views.generic.list_detail',
 
 if settings.DEBUG:
     urlpatterns += patterns('',
-        (r'^accounts_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+        (r'^kgadmin_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     )		

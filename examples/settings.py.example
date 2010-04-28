@@ -21,7 +21,7 @@ MANAGERS = ADMINS
 DATABASE_ENGINE = ''           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
 DATABASE_NAME = ''             # Or path to database file if using sqlite3.
 DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
+#DATABASE_PASSWORD = ''         # Store in private settings
 DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
 DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
 
@@ -44,17 +44,17 @@ USE_I18N = False
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = os_path.join(PROJECT_DIR, 'media')
+MEDIA_ROOT = '/usr/share/kgadmin/media'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/karaage_media/'
+MEDIA_URL = '/kgadmin_media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
 # Examples: "http://foo.com/media/", "/media/".
-ADMIN_MEDIA_PREFIX = '/django_edia/'
+ADMIN_MEDIA_PREFIX = '/django_media/'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -70,8 +70,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     'django.middleware.doc.XViewMiddleware',
     'andsome.middleware.threadlocals.ThreadLocals',
-    'karaage.middleware.auth.ApacheSiteLogin',
 )
+
+# Enable REMOTE_USER auth
+#MIDDLEWARE_CLASSES += (
+#    ('karaage.middleware.auth.ApacheSiteLogin',)
+#)
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',

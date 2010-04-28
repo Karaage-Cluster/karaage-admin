@@ -49,7 +49,7 @@ MEDIA_ROOT = '/usr/share/kgadmin/media'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/karaage_media/'
+MEDIA_URL = '/kgadmin_media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.

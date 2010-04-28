@@ -150,6 +150,8 @@ AUTHENTICATION_BACKENDS = (
 
 GRAPH_DEBUG = True
 GRAPH_LIB = 'karaage.graphs.matplotlib9'
+GRAPH_ROOT = '/var/cache/kgadmin/graphs'
+GRAPH_URL = '/kgadmin_graphs/'
 
 # Do new cluster accounts need a 2nd stage of approval
 ADMIN_APPROVE_ACCOUNTS = True

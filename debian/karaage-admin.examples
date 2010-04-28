@@ -1,0 +1,3 @@
+examples/settings.py.example
+examples/ldap_attrs.py.example
+examples/urls.py.example

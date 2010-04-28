@@ -1,0 +1,38 @@
+{% load common %}
+<div id="content-related">
+  <div class="module">
+    <h2>search</h2>
+    <form id="changelist-search" action="{% url kg_site_search %}" method="post">
+      <div><!-- DIV needed for valid HTML -->
+	&nbsp;<input type="text" size="21" name="sitesearch" value="{{ siteterms }}" id="sitesearch" />
+	<input type="submit" value="Go" />
+      </div>
+    </form>
+  </div>
+  <div class="module">
+    
+    <h2>links</h2>
+    <ul>
+      <li><h3><a class="{% active request "$" %}" href="{% url kg_admin_index %}">Home</a></h3></li>
+      <li><h3><a class="{% active request "users/" %}" href="{% url kg_user_list %}">Users</a></h3></li>
+      <li><h3><a class="{% active request "projects/" %}" href="{% url kg_project_list %}">Projects</a></h3></li>
+      <li><h3><a class="{% active request "usage/" %}" href="{% url kg_usage_list %}">Usage</a></h3></li>
+      <li><h3><a class="{% active request "institutes/" %}" href="{% url kg_institute_list %}">Institutes</a></h3></li>
+      <li><h3><a class="{% active request "machines/" %}" href="{% url kg_machine_list %}">Machines</a></h3></li>
+      <li><h3><a class="{% active request "software/" %}" href="{% url kg_software_list %}">Software</a></h3></li>
+      <li><h3><a class="{% active request "pbs/" %}" href="{% url pbs_server_list %}">PBS Servers</a></h3></li>
+      <li><h3><a class="{% active request "lgroups/" %}" href="{% url plac_grp_list %}">LDAP Groups</a></h3></li>
+      <li><h3><a class="{% active request "emails/" %}" href="{% url kg_emails_index %}">Send Email</a></h3></li>
+      <li><h3><a class="{% active request "projectreports/" %}" href="{% url kg_projectreport_list %}">Project Reports</a></h3></li>
+      <li><h3><a class="{% active request "misc/" %}" href="/accounts/misc/">Other Stuff</a></h3></li>
+      {% if perms.machines.add_useraccount %}
+        	  {% if request_count %}
+        	  <li><h3><a class="{% active request "requests/" %}" href="{% url kg_account_request_list %}">Account Requests</a> ({{ request_count }})</h3></li>
+        	  {% endif %}
+      {% endif %}
+      {% if user.is_staff %}
+      <li><h3><a href="{% url admin:index %}">Admin</a></h3></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

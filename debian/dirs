@@ -1,0 +1,8 @@
+/etc/kgadmin
+/etc/kgadmin/templates-local
+/var/cache/kgadmin
+/var/cache/kgadmin/graphs
+/var/cache/kgadmin/graphs/institutes
+/var/cache/kgadmin/graphs/i_trends
+/var/cache/kgadmin/graphs/projects
+/var/cache/kgadmin/graphs/trends

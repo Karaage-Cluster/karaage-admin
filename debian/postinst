@@ -1,0 +1,10 @@
+#!/bin/bash
+
+ln -s /usr/share/pyshared/kgadmin/conf/private_settings.py /etc/kgadmin/private_settings.py 
+ln -s /usr/share/pyshared/kgadmin/conf/settings.py /etc/kgadmin/settings.py 
+ln -s /usr/share/pyshared/kgadmin/conf/ldap_attrs.py /etc/kgadmin/ldap_attrs.py
+ln -s /usr/share/pyshared/kgadmin/conf/urls.py /etc/kgadmin/urls.py
+
+chown -R www-data:www-data /var/cache/kgadmin
+
+#DEBHELPER#

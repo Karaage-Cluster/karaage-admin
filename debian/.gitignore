@@ -1,0 +1,8 @@
+files
+karaage-admin.debhelper.log
+karaage-admin.postinst.debhelper
+karaage-admin.prerm.debhelper
+karaage-admin.substvars
+karaage-admin/
+pycompat
+python-module-stampdir/

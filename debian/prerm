@@ -4,7 +4,6 @@ rm -rf /var/cache/kgadmin/graphs/projects/*
 rm -rf /var/cache/kgadmin/graphs/trends/*
 rm -rf /var/cache/kgadmin/graphs/institutes/*
 rm -rf /var/cache/kgadmin/graphs/i_trends/*
-rm -f /etc/kgadmin/private_settings.py
 rm -f /etc/kgadmin/settings.py
 rm -f /etc/kgadmin/ldap_attrs.py
 rm -f /etc/kgadmin/urls.py

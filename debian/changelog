@@ -1,3 +1,15 @@
+karaage-admin (1.0.2) testing; urgency=low
+
+  * Simplified settings files. Depend on newer Karaage
+
+ -- Sam Morrison <sam@vpac.org>  Thu, 29 Apr 2010 16:58:43 +1000
+
+karaage-admin (1.0.1) testing; urgency=low
+
+  * Added new GRAPH settings 
+
+ -- Sam Morrison <sam@vpac.org>  Wed, 28 Apr 2010 16:12:49 +1000
+
 karaage-admin (1.0) testing; urgency=low
 
   * Initial release.

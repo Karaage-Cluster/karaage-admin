@@ -1,5 +1,4 @@
 # Django settings for kgadmin project.
-from os import uname
 
 ###
 ### Standard Django settings 
@@ -57,12 +56,6 @@ MIDDLEWARE_CLASSES = (
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda o: "/accounts/users/%s/" % o.username,
 }
-
-SERVER_EMAIL = 'karaage@' + uname()[1]
-EMAIL_HOST = 'smtp.example.com'
-EMAIL_SUBJECT_PREFIX = '[Karaage] - '
-SEND_BROKEN_LINK_EMAILS = True
-
 
 ###
 ### Karaage settings

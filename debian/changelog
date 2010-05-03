@@ -1,3 +1,10 @@
+karaage-admin (1.0.5) testing; urgency=low
+
+  * Added apache config example
+  * Fixed recent actions box on index page
+
+ -- Sam Morrison <sam@vpac.org>  Mon, 03 May 2010 13:19:24 +1000
+
 karaage-admin (1.0.4) testing; urgency=low
 
   * Added daily cleanup script

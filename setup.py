@@ -95,7 +95,7 @@ for i in media_files:
 
 
 data_files =  media_files
-data_files.append(('/usr/sbin', ['sbin/kg-manage',]))
+data_files.append(('/usr/sbin', ['sbin/kg-manage', 'sbin/kg-daily-cleanup']))
 
 
 setup(

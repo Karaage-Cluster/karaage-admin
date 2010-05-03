@@ -1,0 +1,14 @@
+from django.core.management import setup_environ
+from kgadmin import settings
+setup_environ(settings)
+
+from django.core import management
+
+if __name__ == "__main__":
+    management.call_command('cleanup')
+    management.call_command('lock_expired')
+    management.call_command('clear_usage_cache')
+    management.call_command('gen_usage_cache')
+    management.call_command('clear_usage_graphs')
+    management.call_command('gen_usage_graphs')
+

@@ -21,6 +21,7 @@
             	{% if action.is_change %}"changelink"{% endif %}
 					{% if action.is_deletion %}"deletelink"{% endif %}
              	>
+		{{ action.object_repr }}
 		<br /><span class="mini quiet">{{ action.content_type }}</span></li>
              	{% endspaceless %}
             	{% endfor %}

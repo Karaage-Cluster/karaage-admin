@@ -86,7 +86,7 @@ LDAP_GROUP_BASE='ou=Groups, %s' % LDAP_BASE
 LDAP_USE_TLS = False
 LDAP_ADMIN_USER = 'cn=admin,dc=example,dc=org'
 LDAP_ADMIN_PASSWORD = 'secret'
-
+LDAP_LOCK_DN = 'cn=locked,dc=example,dc=org'
 
 ###
 ### Django PBS settings

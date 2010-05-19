@@ -72,6 +72,8 @@ ACCOUNT_DATASTORES = {
 
 ACCOUNTS_EMAIL_FROM = 'accounts@example.com'
 
+LOCKED_SHELL = '/usr/local/sbin/insecure'
+ACCOUNTS_ORG_NAME = 'Example'
 
 ###
 ### Placard Settings

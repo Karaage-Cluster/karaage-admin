@@ -105,4 +105,8 @@ EMAIL_SUBJECT_PREFIX = '[Karaage] - '
 
 SEND_BROKEN_LINK_EMAILS = True
 
+USER_OBJECTCLASS = ['top','person','organizationalPerson','inetOrgPerson', 'shadowAccount',]
+ACCOUNT_OBJECTCLASS = ['top','person','organizationalPerson','inetOrgPerson', 'shadowAccount','posixAccount']
+
+
 from conf.settings import *

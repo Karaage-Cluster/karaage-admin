@@ -6,4 +6,6 @@ ln -s /usr/share/pyshared/kgadmin/conf/urls.py /etc/kgadmin/urls.py
 
 chown -R www-data:www-data /var/cache/kgadmin
 
+kg-manage convert_to_south people
+
 #DEBHELPER#

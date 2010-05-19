@@ -24,6 +24,7 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.humanize',
     'django.contrib.flatpages',
+    'south',
     'andsome.layout',
     'andsome',
     'django_surveys',
@@ -45,7 +46,6 @@ INSTALLED_APPS = (
     'django_pbs.servers',
     'django_pbs.jobs',
     'django.contrib.comments',
-
 )
 
 TEMPLATE_DIRS = (

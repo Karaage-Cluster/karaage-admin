@@ -1,3 +1,9 @@
+karaage-admin (1.0.8) testing; urgency=low
+
+  * Removed django-south dependency. Now in karaage
+
+ -- Sam Morrison <sam@vpac.org>  Wed, 19 May 2010 15:33:12 +1000
+
 karaage-admin (1.0.7) testing; urgency=low
 
   * Added south for DB migrations

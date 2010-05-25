@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'karaage.pbsmoab',
     'karaage.projectreports',
     'karaage.emails',
+    'placard',
     'placard.lgroups',
     'placard.lusers',
     'django_xmlrpc',

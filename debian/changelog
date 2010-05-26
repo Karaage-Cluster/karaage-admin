@@ -1,3 +1,9 @@
+karaage-admin (1.0.9) testing; urgency=low
+
+  * Added placard to installed apps to pick up management commands
+
+ -- Sam Morrison <sam@vpac.org>  Wed, 26 May 2010 11:23:59 +1000
+
 karaage-admin (1.0.8) testing; urgency=low
 
   * Removed django-south dependency. Now in karaage

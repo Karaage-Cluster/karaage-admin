@@ -1,3 +1,9 @@
+karaage-admin (1.0.10) testing; urgency=low
+
+  * Added man page for kg-daily-cleanup
+
+ -- Sam Morrison <sam@vpac.org>  Wed, 26 May 2010 15:34:25 +1000
+
 karaage-admin (1.0.9) testing; urgency=low
 
   * Added placard to installed apps to pick up management commands

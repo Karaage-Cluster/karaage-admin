@@ -25,13 +25,18 @@ def get_next_uid(data):
         from placard.client import LDAPClient
         conn = LDAPClient()
         uidNumber = conn.get_new_uid()
-        return [str(uidNumber)]
+        return str(uidNumber)
     else:
         return ''
 
+def get_gid(data):
+    if 'posixAccount' in data['objectClass']:
+        return data['person'].institute.gid
+    return ''
 
 GENERATED_USER_ATTRS = {
     'uidNumber': get_next_uid,
+    'gidNumber': get_gid,
     'gecos': lambda x: 'posixAccount' in x['objectClass'] and '%s %s (%s)' % (str(x['givenName']), str(x['sn']), str(x['o'])) or '', 
     'cn': lambda x: '%s %s' % (str(x['givenName']), str(x['sn'])),
     'homeDirectory': lambda x: 'posixAccount' in x['objectClass'] and '/home/%s' % x['uid'] or '',

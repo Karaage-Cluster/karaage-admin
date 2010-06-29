@@ -109,5 +109,9 @@ SEND_BROKEN_LINK_EMAILS = True
 USER_OBJECTCLASS = ['top','person','organizationalPerson','inetOrgPerson', 'shadowAccount',]
 ACCOUNT_OBJECTCLASS = ['top','person','organizationalPerson','inetOrgPerson', 'shadowAccount','posixAccount']
 
+LOCAL_INSTALLED_APPS = ()
 
 from conf.settings import *
+
+INSTALLED_APPS += LOCAL_INSTALLED_APPS
+

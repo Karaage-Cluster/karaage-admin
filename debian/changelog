@@ -1,3 +1,10 @@
+karaage-admin (1.0.11) stable; urgency=low
+
+  * Provide a way to have local installed apps. Addresses #52
+  * Fix errors in default config. Fixes: #45.
+	
+ -- Sam Morrison <sam@vpac.org>  Tue, 29 Jun 2010 10:30:54 +1000
+
 karaage-admin (1.0.10) testing; urgency=low
 
   * Added man page for kg-daily-cleanup

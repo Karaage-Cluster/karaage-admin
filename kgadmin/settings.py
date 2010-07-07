@@ -20,6 +20,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.messages',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.humanize',
@@ -64,6 +65,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.auth',
     'django.core.context_processors.debug',
     'django.core.context_processors.media',
+    'django.contrib.messages.context_processors.messages',
     'karaage.context_processors.common',
 )
 
@@ -108,6 +110,19 @@ SEND_BROKEN_LINK_EMAILS = True
 
 USER_OBJECTCLASS = ['top','person','organizationalPerson','inetOrgPerson', 'shadowAccount',]
 ACCOUNT_OBJECTCLASS = ['top','person','organizationalPerson','inetOrgPerson', 'shadowAccount','posixAccount']
+
+
+MIDDLEWARE_CLASSES = (
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'django.middleware.doc.XViewMiddleware',
+    'andsome.middleware.threadlocals.ThreadLocals',
+)
+
 
 LOCAL_INSTALLED_APPS = ()
 

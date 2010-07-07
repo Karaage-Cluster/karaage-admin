@@ -2,7 +2,7 @@
 
 ###
 ### Standard Django settings 
-### see http://docs.djangoproject.com/en/1.1/ref/settings/#ref-settings
+### see http://docs.djangoproject.com/en/1.2/ref/settings/#ref-settings
 ###
 
 DEBUG = False
@@ -14,12 +14,16 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = ''           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = ''             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3
+        'PASSWORD': '',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+    }
+}
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -37,21 +41,6 @@ SITE_ID = 1
 # Make this unique, and don't share it with anybody. AKA CHANGE THIS!
 SECRET_KEY = '%g6mqnpu)l!$*1dlav#!$bc9bhnufvj)878uug2$6ize_9jn0c'
 
-
-
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'django.middleware.doc.XViewMiddleware',
-    'andsome.middleware.threadlocals.ThreadLocals',
-)
-
-# Enable REMOTE_USER auth
-#MIDDLEWARE_CLASSES += (
-#    ('karaage.middleware.auth.ApacheSiteLogin',)
-#)
 
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda o: "/accounts/users/%s/" % o.username,

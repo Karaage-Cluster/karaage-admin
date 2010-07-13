@@ -3,7 +3,7 @@ AUTH_PROFILE_MODULE = 'people.Person'
 
 GRAPH_DEBUG = False
 GRAPH_LIB = 'karaage.graphs.matplotlib9'
-GRAPH_ROOT = '/var/cache/kgadmin/graphs'
+GRAPH_ROOT = '/var/cache/karaage/graphs'
 GRAPH_URL = '/kgadmin_graphs/'
 
 DEFAULT_MC = 1

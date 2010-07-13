@@ -8,6 +8,6 @@ Standards-Version: 3.8.4
 Package: karaage-admin
 Architecture: all
 Homepage: http://trac.vpac.org/karaage/
-Depends: ${misc:Depends}, ${python:Depends}, karaage (>= 2.4)
+Depends: ${misc:Depends}, ${python:Depends}, karaage (>= 2.4), karaage-common (>= 1.0)
 Description: Admin interface to karaage
  This package contains the admin web interface to Karaage.

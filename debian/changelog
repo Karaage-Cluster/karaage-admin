@@ -1,8 +1,20 @@
+karaage-admin (1.2) lucid; urgency=low
+
+  * Move graph cache dir to karaage-common 
+
+ -- Sam Morrison <sam@vpac.org>  Tue, 13 Jul 2010 15:17:33 +1000
+
+karaage-admin (1.1) unstable; urgency=low
+
+  * Use django 1.2 specific options
+
+ -- Sam Morrison <sam@vpac.org>  Wed, 07 Jul 2010 10:54:36 +1000
+
 karaage-admin (1.0.11) stable; urgency=low
 
   * Provide a way to have local installed apps. Addresses #52
   * Fix errors in default config. Fixes: #45.
-	
+
  -- Sam Morrison <sam@vpac.org>  Tue, 29 Jun 2010 10:30:54 +1000
 
 karaage-admin (1.0.10) testing; urgency=low
@@ -33,7 +45,7 @@ karaage-admin (1.0.7) testing; urgency=low
 karaage-admin (1.0.6) testing; urgency=low
 
   * Fixed bug in kg-daily-cleanup script
-  * Added javascript for calendar javascript widget 
+  * Added javascript for calendar javascript widget
 
  -- Sam Morrison <sam@vpac.org>  Wed, 05 May 2010 10:43:05 +1000
 
@@ -52,7 +64,7 @@ karaage-admin (1.0.4) testing; urgency=low
 
 karaage-admin (1.0.3) testing; urgency=low
 
-  * More simplifying of settings 
+  * More simplifying of settings
 
  -- Sam Morrison <sam@vpac.org>  Fri, 30 Apr 2010 10:47:34 +1000
 
@@ -64,7 +76,7 @@ karaage-admin (1.0.2) testing; urgency=low
 
 karaage-admin (1.0.1) testing; urgency=low
 
-  * Added new GRAPH settings 
+  * Added new GRAPH settings
 
  -- Sam Morrison <sam@vpac.org>  Wed, 28 Apr 2010 16:12:49 +1000
 

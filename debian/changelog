@@ -1,6 +1,6 @@
-karaage-admin (1.2) lucid; urgency=low
+karaage-admin (1.2) unstable; urgency=low
 
-  * Move graph cache dir to karaage-common 
+  * Move graph cache dir to karaage-common
 
  -- Sam Morrison <sam@vpac.org>  Tue, 13 Jul 2010 15:17:33 +1000
 

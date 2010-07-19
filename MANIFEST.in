@@ -6,3 +6,5 @@ recursive-include man *
 recursive-include sbin *
 recursive-include media *
 recursive-include templates *
+recursive-include conf *
+recursive-include scripts *

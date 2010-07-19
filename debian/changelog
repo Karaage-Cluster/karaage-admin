@@ -1,3 +1,9 @@
+karaage-admin (1.2-1) unstable; urgency=low
+
+  * Change to Debian native format.
+
+ -- Brian May <brian@vpac.org>  Mon, 19 Jul 2010 11:46:52 +1000
+
 karaage-admin (1.2) unstable; urgency=low
 
   * Move graph cache dir to karaage-common

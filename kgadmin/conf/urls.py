@@ -53,4 +53,4 @@ if settings.DEBUG:
         (r'^kgadmin_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
     )		
 
-execfile("/etc/karaage/admin-urls.py")
+execfile("/etc/karaage/admin_urls.py")

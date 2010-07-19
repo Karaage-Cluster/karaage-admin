@@ -97,6 +97,11 @@ for i in media_files:
 data_files =  media_files
 data_files.append(('/usr/sbin', ['sbin/kg-manage', 'sbin/kg-daily-cleanup']))
 
+data_files.append(
+    ('/etc/karaage', [
+        'conf/admin_settings.py',
+        'conf/admin_urls.py' ])
+)
 
 setup(
     name = "karaage-admin",

@@ -1,7 +1,0 @@
-#!/bin/bash
-
-rm -f /etc/kgadmin/settings.py
-rm -f /etc/kgadmin/ldap_attrs.py
-rm -f /etc/kgadmin/urls.py
-
-#DEBHELPER#

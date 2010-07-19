@@ -1,7 +1,0 @@
-#!/bin/bash
-
-ln -s /usr/share/pyshared/kgadmin/conf/settings.py /etc/kgadmin/settings.py 
-ln -s /usr/share/pyshared/kgadmin/conf/ldap_attrs.py /etc/kgadmin/ldap_attrs.py
-ln -s /usr/share/pyshared/kgadmin/conf/urls.py /etc/kgadmin/urls.py
-
-#DEBHELPER#

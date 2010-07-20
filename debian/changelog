@@ -1,8 +1,10 @@
-karaage-admin (1.2-1) unstable; urgency=low
+karaage-admin (1.3-1) testing; urgency=low
 
-  * Change to Debian native format.
+  * Change to Debian non-native format.
+  * Use new configuration system.
+  * Requires karaage 2.3.10 or new base configuration.
 
- -- Brian May <brian@vpac.org>  Mon, 19 Jul 2010 11:46:52 +1000
+ -- Brian May <bam@debian.org>  Tue, 20 Jul 2010 13:59:32 +1000
 
 karaage-admin (1.2) unstable; urgency=low
 

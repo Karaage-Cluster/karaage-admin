@@ -16,4 +16,7 @@ MEDIA_URL = '/kgadmin_media/'
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = '/usr/share/kgadmin/media'
 
+LOGIN_URL="/kgadmin/accounts/login/"
+LOGIN_REDIRECT_URL="/kgadmin/"
+
 execfile("/etc/karaage/admin_settings.py")

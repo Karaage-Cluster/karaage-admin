@@ -22,9 +22,7 @@
       <li><h3><a class="{% active request "software/" %}" href="{% url kg_software_list %}">Software</a></h3></li>
       <li><h3><a class="{% active request "pbs/" %}" href="{% url pbs_server_list %}">PBS Servers</a></h3></li>
       <li><h3><a class="{% active request "lgroups/" %}" href="{% url plac_grp_list %}">LDAP Groups</a></h3></li>
-      <li><h3><a class="{% active request "emails/" %}" href="{% url kg_emails_index %}">Send Email</a></h3></li>
-      <li><h3><a class="{% active request "projectreports/" %}" href="{% url kg_projectreport_list %}">Project Reports</a></h3></li>
-      <li><h3><a class="{% active request "misc/" %}" href="/accounts/misc/">Other Stuff</a></h3></li>
+      <li><h3><a class="{% active request "misc/" %}" href="{% url kg_misc %}">Other Stuff</a></h3></li>
       <li><h3><a class="{% active request "applications/" %}" href="{% url kg_application_list %}">Applications</a></h3></li>
 
       {% if perms.machines.add_useraccount %}

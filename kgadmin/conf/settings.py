@@ -5,6 +5,8 @@ TEMPLATE_DIRS += (
     "/usr/share/kgadmin/templates",
 )
 
+SITE_ID = 1
+
 ROOT_URLCONF = 'kgadmin.conf.urls'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a

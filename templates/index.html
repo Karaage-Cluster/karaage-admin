@@ -58,6 +58,11 @@
 		</table>
 	</div>
 	{% endif %}
+{% if user_applications %}
+<ul class="messagelist">
+	<li>There are applications that require admin approval.  Please use <a href="{% url kg_application_list %}">Applications</a> link to view.</li>
+</ul>
+{% endif %}
 	{% if userrequest_list %}
 	<div class="module">
    	<h2>Requests to join a project not yet approved by leader</h2>

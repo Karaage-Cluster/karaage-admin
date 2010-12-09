@@ -28,7 +28,7 @@ urlpatterns = patterns('',
     url(r'^lusers/', include('placard.lusers.urls')),                  
     url(r'^lgroups/', include('placard.lgroups.urls')),
     url(r'^misc/$', 'django.views.generic.simple.direct_to_template', {'template': 'misc/index.html'}, name='kg_misc'),
-
+    url(r'xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc',),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),                   
 

@@ -30,7 +30,7 @@
         	  <li><h3><a class="{% active request "requests/" %}" href="{% url kg_account_request_list %}">Account Requests</a> ({{ request_count }})</h3></li>
         	  {% endif %}
       {% endif %}
-      {% if user.is_staff %}
+      {% if user.is_superuser %}
       <li><h3><a href="{% url admin:index %}">Admin</a></h3></li>
       {% endif %}
     </ul>

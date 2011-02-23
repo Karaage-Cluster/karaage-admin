@@ -3,6 +3,7 @@ import os.path
 from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.core.exceptions import ImproperlyConfigured
 from django.conf import settings
+from django.core.urlresolvers import get_script_prefix
 
 class StaffOnly(object):
     def process_request(self, request):
@@ -24,7 +25,7 @@ class StaffOnly(object):
         if request.path == settings.LOGOUT_URL:
             return None
 
-        if request.path == "/accounts/xmlrpc/":
+        if request.path == "%sxmlrpc/" % get_script_prefix():
             return None
 
         if settings.DEBUG:

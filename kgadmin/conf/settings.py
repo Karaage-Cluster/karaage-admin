@@ -21,6 +21,8 @@ MEDIA_ROOT = '/usr/share/kgadmin/media'
 LOGIN_URL="/kgadmin/accounts/login/"
 LOGIN_REDIRECT_URL="/kgadmin/"
 
+MIDDLEWARE_CLASSES += ('kgadmin.middleware.StaffOnly',)
+
 XMLRPC_METHODS = (
     ('karaage.pbsmoab.xmlrpc.parse_usage', 'parse_usage',),
     ('karaage.pbsmoab.xmlrpc.get_project', 'get_project',),

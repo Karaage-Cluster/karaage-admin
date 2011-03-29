@@ -13,4 +13,5 @@ if __name__ == "__main__":
     management.call_command('gen_usage_cache')
     management.call_command('clear_usage_graphs')
     management.call_command('gen_usage_graphs')
+    management.call_command('application_cleanup')
 

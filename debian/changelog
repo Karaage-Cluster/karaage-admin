@@ -1,3 +1,12 @@
+karaage-admin (1.3.4-1) testing; urgency=low
+
+  * Added apache variables and change graph path to karaage_graphs
+  * Added application cleanup to daily cleanup script
+  * Put apache config in /etc/karaage
+  * Minor packaging improvements
+
+ -- Sam Morrison <sam@vpac.org>  Mon, 04 Apr 2011 16:13:26 +1000
+
 karaage-admin (1.3.3-1) testing; urgency=low
 
   * Add xmlrpc to site

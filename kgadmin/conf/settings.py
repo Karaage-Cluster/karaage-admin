@@ -21,6 +21,8 @@ MEDIA_ROOT = '/usr/share/kgadmin/media'
 LOGIN_URL="/kgadmin/accounts/login/"
 LOGIN_REDIRECT_URL="/kgadmin/"
 
+TEMPLATE_CONTEXT_PROCESSORS += ('karaage.context_processors.admin',)
+
 MIDDLEWARE_CLASSES += ('kgadmin.middleware.StaffOnly',)
 
 XMLRPC_METHODS = (

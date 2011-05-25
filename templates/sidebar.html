@@ -23,13 +23,7 @@
       <li><h3><a class="{% active request "pbs/" %}" href="{% url pbs_server_list %}">PBS Servers</a></h3></li>
       <li><h3><a class="{% active request "lgroups/" %}" href="{% url plac_grp_list %}">LDAP Groups</a></h3></li>
       <li><h3><a class="{% active request "misc/" %}" href="{% url kg_misc %}">Other Stuff</a></h3></li>
-      <li><h3><a class="{% active request "applications/" %}" href="{% url kg_application_list %}">Applications</a></h3></li>
-
-      {% if perms.machines.add_useraccount %}
-        	  {% if request_count %}
-        	  <li><h3><a class="{% active request "requests/" %}" href="{% url kg_account_request_list %}">Account Requests</a> ({{ request_count }})</h3></li>
-        	  {% endif %}
-      {% endif %}
+      <li><h3><a class="{% active request "applications/" %}" href="{% url kg_application_list %}">Applications</a>{% if pending_apps %} ({{ pending_apps.count }}){% endif %}</h3></li>
       {% if user.is_superuser %}
       <li><h3><a href="{% url admin:index %}">Admin</a></h3></li>
       {% endif %}

@@ -1,3 +1,10 @@
+karaage-admin (1.3.5-1) stable; urgency=low
+
+  * Show pending applications in sidebar
+  * Added wsgi script
+
+ -- Sam Morrison <sam@vpac.org>  Wed, 25 May 2011 15:00:18 +1000
+
 karaage-admin (1.3.4-1) testing; urgency=low
 
   * Added apache variables and change graph path to karaage_graphs

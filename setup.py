@@ -101,6 +101,7 @@ data_files.append(
     ('/etc/karaage', [
         'conf/admin_settings.py',
         'conf/admin_urls.py',
+        'conf/karaage-admin.wsgi',
         'conf/kgadmin-apache.conf',])
 )
 

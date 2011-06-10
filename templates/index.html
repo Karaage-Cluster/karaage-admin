@@ -6,6 +6,7 @@
 
 {% block breadcrumbs %}Home{% endblock %}
     
+
 {% block content %}
 <div id="content-main">
 {% if user.is_authenticated %}
@@ -30,67 +31,12 @@
     </div>
     {% endif %}
     	
-	{% if projectrequest_list %}
-	<div class="module">
-   	<h2>New project requests not yet approved by delegate</h2>
-   	
-   	<table cellspacing="0">
-		<thead>
-		<tr>
-			<th>Name</th>
-			<th>Project</th>
-			<th>Delegate</th>
-			<th>Date requested</th>
-			<th>Time since</th>
-		</tr>
-		</thead>   	
-   	<tbody>
-   	{% for projectrequest in projectrequest_list %}
-	   	<tr class="{% cycle row1,row2 %}">
-	   		<td><a href="{{ projectrequest.person.get_absolute_url }}">{{ projectrequest.person.get_full_name }}</a></td>
-	   		<td><a href="{{ projectrequest.project.get_absolute_url }}">{{ projectrequest.project }}</a></td>
-	   		<td><a href="{{ projectrequest.project.institute.active_delegate.get_absolute_url }}">{{ projectrequest.project.institute.active_delegate }}</a></td>
-	   		<td>{{ projectrequest.date|date }}</td>
-	   		<td>{{ projectrequest.date|timesince }}</td>
-	   	</tr>
-	   {% endfor %}
-   	</tbody>  	
-		</table>
-	</div>
-	{% endif %}
-{% if user_applications %}
+{% if pending_apps %}
 <ul class="messagelist">
-	<li>There are applications that require admin approval.  Please use <a href="{% url kg_application_list %}">Applications</a> link to view.</li>
+	<li>There are <a href="{% url kg_application_list %}?state=K">pending applications</a> that require admin approval.</li>
 </ul>
 {% endif %}
-	{% if userrequest_list %}
-	<div class="module">
-   	<h2>Requests to join a project not yet approved by leader</h2>
-   	
-   	<table cellspacing="0">
-		<thead>
-		<tr>
-			<th>Name</th>
-			<th>Project</th>
-			<th>Leader</th>
-			<th>Date requested</th>
-			<th>Time since</th>
-		</tr>
-		</thead>   	
-   	<tbody>
-   	{% for userrequest in userrequest_list %}
-	   	<tr class="{% cycle row1,row2 %}">
-	   		<td><a href="{{ userrequest.person.get_absolute_url }}">{{ userrequest.person.get_full_name }}</a></td>
-	   		<td><a href="{{ userrequest.project.get_absolute_url }}">{{ userrequest.project }}</a></td>
-	   		<td><a href="{{ userrequest.project.leader.get_absolute_url }}">{{ userrequest.project.leader }}</a></td>
-	   		<td>{{ userrequest.date|date }}</td>
-	   		<td>{{ userrequest.date|timesince }}</td>
-	   	</tr>
-	   {% endfor %}
-   	</tbody>  	
-		</table>
-	</div>
-	{% endif %}
+
 	<div class="module">
    	<h2>Newest Users</h2>
     	{% gen_table newest_users %}

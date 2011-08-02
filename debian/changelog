@@ -1,3 +1,9 @@
+karaage-admin (1.3.6-1) testing; urgency=low
+
+  * Minor changes due to changes in karaage
+
+ -- Sam Morrison <sam@vpac.org>  Tue, 02 Aug 2011 11:45:22 +1000
+
 karaage-admin (1.3.5-1) stable; urgency=low
 
   * Show pending applications in sidebar

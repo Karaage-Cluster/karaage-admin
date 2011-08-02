@@ -25,14 +25,4 @@ TEMPLATE_CONTEXT_PROCESSORS += ('karaage.context_processors.admin',)
 
 MIDDLEWARE_CLASSES += ('kgadmin.middleware.StaffOnly',)
 
-XMLRPC_METHODS = (
-    ('karaage.pbsmoab.xmlrpc.parse_usage', 'parse_usage',),
-    ('karaage.pbsmoab.xmlrpc.get_project', 'get_project',),
-    ('karaage.pbsmoab.xmlrpc.project_under_quota', 'project_under_quota',),
-    ('karaage.pbsmoab.xmlrpc.showquota', 'showquota',),
-    ('karaage.pbsmoab.xmlrpc.get_disk_quota', 'get_disk_quota',),
-    ('karaage.pbsmoab.xmlrpc.change_default_project', 'change_default_project',),
-)
-
-
 execfile("/etc/karaage/admin_settings.py")

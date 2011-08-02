@@ -14,11 +14,10 @@ urlpatterns = patterns('',
     url(r'^institutes/', include('karaage.institutes.urls.admin')),
     url(r'^projects/', include('karaage.projects.urls.admin')),
     url(r'^machines/', include('karaage.machines.urls')),
-    url(r'^usage/', include('karaage.usage.urls')),
+    url(r'^usage/', include('karaage.usage.urls.admin')),
     url(r'^software/', include('karaage.software.urls.admin')),
     url(r'^projectreports/', include('karaage.projectreports.urls.admin')),
     url(r'^surveys/', include('django_surveys.urls')),
-    url(r'^requests/', include('karaage.requests.urls.admin')),
     url(r'^pbsmoab/', include('karaage.pbsmoab.urls')),
     url(r'^emails/', include('karaage.emails.urls')),
     url(r'^applications/', include('karaage.applications.urls.admin')),
@@ -38,7 +37,7 @@ urlpatterns = patterns('',
 )
 
 log_dict = {
-    'queryset': LogEntry.objects.all(),
+    'queryset': LogEntry.objects.select_related(),
     'paginate_by': 50,
     'template_name': 'log_list.html',
     'template_object_name': 'log',
@@ -52,6 +51,7 @@ urlpatterns += patterns('django.views.generic.list_detail',
 if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^kgadmin_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+        (r'^karaage_graphs/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.GRAPH_ROOT}),
     )		
 
 execfile("/etc/karaage/admin_urls.py")

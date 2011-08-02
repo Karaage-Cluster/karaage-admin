@@ -9,7 +9,7 @@ Standards-Version: 3.9.1
 Package: karaage-admin
 Architecture: all
 Homepage: http://trac.vpac.org/karaage/
-Depends: ${misc:Depends}, ${python:Depends}, karaage (>= 2.5.10), karaage-common (>= 1.1.2), django-ajax-selects (>= 1.1.4)
+Depends: ${misc:Depends}, ${python:Depends}, karaage (>= 2.6), karaage-common (>= 1.1.2), django-ajax-selects (>= 1.1.4)
 Description: Admin interface to karaage
  Karaage is an open source collection of Django apps to manage a clusters.
  This package contains the admin web interface to Karaage.

@@ -35,6 +35,6 @@ class StaffOnly(object):
                 return None
 
         if not request.user.is_authenticated():
-            return redirect_to_login(request.path, settings.LOGIN_URL, "next")
+            return redirect_to_login(request.path)
 
         return HttpResponseForbidden('<h1>Access Denied</h1>')

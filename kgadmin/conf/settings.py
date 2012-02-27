@@ -27,4 +27,7 @@ MIDDLEWARE_CLASSES += ('kgadmin.middleware.StaffOnly',)
 
 USAGE_IS_PUBLIC = True
 
+AJAX_SELECT_BOOTSTRAP = False
+AJAX_SELECT_INLINES = None
+
 execfile("/etc/karaage/admin_settings.py")

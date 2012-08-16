@@ -30,8 +30,8 @@ class StaffOnly(object):
             return None
 
         if settings.DEBUG:
-            prefix = os.path.commonprefix( [ request.path, settings.MEDIA_URL ] )
-            if prefix == settings.MEDIA_URL:
+            prefix = os.path.commonprefix( [ request.path, settings.STATIC_URL ] )
+            if prefix == settings.STATIC_URL:
                 return None
 
         if not request.user.is_authenticated():

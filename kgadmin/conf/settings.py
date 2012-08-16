@@ -9,14 +9,9 @@ SITE_ID = 1
 
 ROOT_URLCONF = 'kgadmin.conf.urls'
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash if there is a path component (optional in other cases).
-# Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = '/kgadmin_media/'
-
-# Absolute path to the directory that holds media.
-# Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = '/usr/share/kgadmin/media'
+STATIC_ROOT = '/var/lib/karaage-admin/static'
+STATIC_URL = '/kgadmin_media/'
+ADMIN_MEDIA_PREFIX = '/kgadmin_media/admin/'
 
 LOGIN_URL="/kgadmin/accounts/login/"
 LOGIN_REDIRECT_URL="/kgadmin/"

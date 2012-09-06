@@ -3,4 +3,4 @@ set -e
 
 #DEBHELPER#
 
-kg-manage collectstatic --noinput
+django-admin collectstatic --settings=kgadmin.conf.settings --noinput

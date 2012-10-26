@@ -3,6 +3,7 @@ from distutils.command.install_data import install_data
 from distutils.command.install import INSTALL_SCHEMES
 import os
 import sys
+import ast
 
 class osx_install_data(install_data):
     # On MacOS, the platform-specific lib dir is /System/Library/Framework/Python/.../
@@ -65,9 +66,27 @@ if len(sys.argv) > 1 and sys.argv[1] == 'bdist_wininst':
     for file_info in data_files:
         file_info[0] = '\\PURELIB\\%s' % file_info[0]
 
-
-version = __import__(code_dir).get_version()
-
+path = "kgadmin/__init__.py"
+with open(path, 'rU') as file:
+    t = compile(file.read(), path, 'exec', ast.PyCF_ONLY_AST)
+    for node in (n for n in t.body if isinstance(n, ast.Assign)):
+        if len(node.targets) == 1:
+            name = node.targets[0]
+            if isinstance(name, ast.Name) and \
+                    name.id in ('__version__', '__version_info__', 'VERSION'):
+                v = node.value
+                if isinstance(v, ast.Str):
+                    version = v.s
+                    break
+                if isinstance(v, ast.Tuple):
+                    r = []
+                    for e in v.elts:
+                        if isinstance(e, ast.Str):
+                            r.append(e.s)
+                        elif isinstance(e, ast.Num):
+                            r.append(str(e.n))
+                    version = '.'.join(r)
+                    break
 
 media_files = []
 for dirpath, dirnames, filenames in os.walk('media'):

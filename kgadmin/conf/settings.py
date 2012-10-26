@@ -11,7 +11,6 @@ ROOT_URLCONF = 'kgadmin.conf.urls'
 
 STATIC_ROOT = '/var/lib/karaage-admin/static'
 STATIC_URL = '/kgadmin_media/'
-ADMIN_MEDIA_PREFIX = '/kgadmin_media/admin/'
 
 LOGIN_URL="/kgadmin/accounts/login/"
 LOGIN_REDIRECT_URL="/kgadmin/"

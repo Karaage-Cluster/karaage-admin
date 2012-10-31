@@ -3,12 +3,18 @@ from django.contrib import admin
 from django.conf import settings
 from django.contrib.admin.models import LogEntry
 
+import ajax_select.urls
+import placard.views
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^$', 'karaage.views.admin_index', name='kg_admin_index'),
+
+    url(r'^lookup/', include(ajax_select.urls)),
+
     url(r'^search/$', 'karaage.views.search', name='kg_site_search'), 
-    url(r'^users/(?P<username>[-.\w]+)/ldap/$', 'placard.lusers.views.user_detail_verbose'),
+    url(r'^users/(?P<username>[-.\w]+)/ldap/$', placard.views.AccountVerbose.as_view()),
 
     url(r'^users/', include('karaage.people.urls.admin')),
     url(r'^institutes/', include('karaage.institutes.urls.admin')),
@@ -24,8 +30,8 @@ urlpatterns = patterns('',
 
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^pbs/', include('django_pbs.servers.urls')),                  
-    url(r'^lusers/', include('placard.lusers.urls')),                  
-    url(r'^lgroups/', include('placard.lgroups.urls')),
+    url(r'^lusers/', include('placard.user_urls')),                  
+    url(r'^lgroups/', include('placard.group_urls')),
     url(r'^misc/$', 'django.views.generic.simple.direct_to_template', {'template': 'misc/index.html'}, name='kg_misc'),
     url(r'^xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc',),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),

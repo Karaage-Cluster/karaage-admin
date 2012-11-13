@@ -35,18 +35,8 @@
     </ul>
   </div>
   {% block sidebar_extra %}
-  <div class="module">
-    <h2>Object links</h2>
-    {% block object-tools %}
-    {% endblock %}
-  </div>
+  {% block object-tools %}
   {% endblock %}
-</div>
-{% endblock %}
-
-{% block content %}
-<div id="content-main">
-{% block content_main %}
-{% endblock %}
+  {% endblock %}
 </div>
 {% endblock %}

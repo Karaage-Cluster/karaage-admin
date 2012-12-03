@@ -32,7 +32,7 @@ urlpatterns = patterns('',
 
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^pbs/', include('django_pbs.servers.urls')),                  
-    url(r'^lusers/', include('placard.user_urls')),                  
+    url(r'^lusers/', include('placard.account_urls')),                  
     url(r'^lgroups/', include('placard.group_urls')),
     url(r'^misc/$', 'django.views.generic.simple.direct_to_template', {'template': 'misc/index.html'}, name='kg_misc'),
     url(r'^xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc',),

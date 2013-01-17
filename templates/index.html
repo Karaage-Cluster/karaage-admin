@@ -1,4 +1,5 @@
 {% extends "main.html" %}
+{% load url from future %}
 {% load common %}
 {% block title %}Home{% endblock %}
 
@@ -11,7 +12,7 @@
 {% if user.is_authenticated %}
 		<div class="module">
         <h2>Recent Actions</h2>
-        <h3>My Actions <a href="{% url kg_log_list %}">View All</a></h3>
+        <h3>My Actions <a href="{% url "kg_log_list" %}">View All</a></h3>
 			 <ul class="plainlist">
             	{% for action in recent_actions %}
             	{% spaceless %}
@@ -34,7 +35,7 @@
     	
 {% if pending_apps %}
 <ul class="messagelist">
-	<li>There are <a href="{% url kg_application_list %}?state=K">pending applications</a> that require admin approval.</li>
+	<li>There are <a href="{% url "kg_application_list" %}?state=K">pending applications</a> that require admin approval.</li>
 </ul>
 {% endif %}
 

@@ -3,12 +3,12 @@ Section: python
 Priority: optional
 Maintainer: Brian May <bam@debian.org>
 Build-Depends: debhelper (>=7.0.0), python (>= 2.4), python-support (>= 0.6), cdbs (>= 0.4.49)
-Standards-Version: 3.9.2
+Standards-Version: 3.9.1
 
 Package: karaage-admin
 Architecture: all
 Homepage: http://trac.vpac.org/karaage/
-Depends: ${misc:Depends}, ${python:Depends}, karaage (>= 2.6.3), karaage-common (>= 1.1.2), django-ajax-selects (>= 1.1.4)
+Depends: ${misc:Depends}, ${python:Depends}, karaage (>= 2.7.0), karaage-common (>= 1.1.2)
 Description: Admin interface to karaage
  Karaage is an open source collection of Django apps to manage a clusters.
  This package contains the admin web interface to Karaage.

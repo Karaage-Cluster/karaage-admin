@@ -1,3 +1,10 @@
+karaage-admin (1.4.0-1) stable; urgency=low
+
+  * Support karaage 2.7.0 (significant changes).
+  * Support django 1.5.
+
+ -- Brian May <bam@debian.org>  Mon, 11 Feb 2013 13:06:54 +1100
+
 karaage-admin (1.3.12-1) stable; urgency=low
 
   * Remove ADMIN_MEDIA_PREFIX for Django 1.4.

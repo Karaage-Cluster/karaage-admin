@@ -15,8 +15,8 @@ urlpatterns = patterns('',
 
     url(r'^search/$', 'karaage.views.search', name='kg_site_search'), 
 
-    url(r'^password/$', placard.views.UserChangePassword.as_view(), name='plac_user_password'),
-    url(r'^users/(?P<account>[-.\w]+)/ldap/$', placard.views.AccountVerbose.as_view()),
+    url(r'^password/$', placard.views.ChangePassword.as_view(), name='plac_user_password'),
+    url(r'^users/(?P<account>[-.\w]+)/ldap/$', placard.views.AccountVerbose.as_view(), name='kg_user_verbose'),
 
     url(r'^users/', include('karaage.people.urls.admin')),
     url(r'^institutes/', include('karaage.institutes.urls.admin')),

@@ -1,3 +1,10 @@
+karaage-admin (1.4.1-1) stable; urgency=low
+
+  * Fix password change links.
+  * Give user LDAP link a name.
+
+ -- Brian May <bam@debian.org>  Mon, 18 Feb 2013 11:58:57 +1100
+
 karaage-admin (1.4.0-1) stable; urgency=low
 
   * Support karaage 2.7.0 (significant changes).

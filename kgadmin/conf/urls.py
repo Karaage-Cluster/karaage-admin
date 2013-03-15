@@ -16,7 +16,6 @@ urlpatterns = patterns('',
     url(r'^search/$', 'karaage.views.search', name='kg_site_search'), 
 
     url(r'^password/$', placard.views.ChangePassword.as_view(), name='plac_user_password'),
-    url(r'^users/(?P<account>[-.\w]+)/ldap/$', placard.views.AccountVerbose.as_view(), name='kg_user_verbose'),
 
     url(r'^users/', include('karaage.people.urls.admin')),
     url(r'^institutes/', include('karaage.institutes.urls.admin')),
@@ -32,7 +31,6 @@ urlpatterns = patterns('',
 
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^pbs/', include('django_pbs.servers.urls')),                  
-    url(r'^lusers/', include('placard.account_urls')),                  
     url(r'^lgroups/', include('placard.group_urls')),
     url(r'^misc/$', 'karaage.legacy.simple.direct_to_template', {'template': 'misc/index.html'}, name='kg_misc'),
     url(r'^xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc',),

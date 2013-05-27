@@ -3,4 +3,13 @@ set -e
 
 #DEBHELPER#
 
-django-admin collectstatic --settings=kgadmin.conf.settings --noinput
+if [ "$1" = "configure" ]; then
+    django-admin collectstatic --settings=kgadmin.conf.settings --noinput
+fi
+
+if [ "$1" = "triggered" ]; then
+    if [ "$2" = "karaage-migrations" ]; then
+        echo "Running migrations"
+        /usr/sbin/kg-manage migrate
+    fi
+fi

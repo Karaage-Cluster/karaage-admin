@@ -1,6 +1,7 @@
 karaage-admin (1.4.3-1) UNRELEASED; urgency=low
 
   * Use triggers for db migration.
+  * Use python2 build method.
 
  -- Brian May <bam@debian.org>  Tue, 28 May 2013 13:38:52 +1000
 

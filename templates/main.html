@@ -20,13 +20,13 @@
     <ul>
       <li><a class="{% active request "$" %}" href="{% url "kg_admin_index" %}">Home</a></li>
       <li><a class="{% active request "users/" %}" href="{% url "kg_user_list" %}?status=1">Users</a></li>
+      <li><a class="{% active request "groups/" %}" href="{% url "kg_group_list" %}">Groups</a></li>
       <li><a class="{% active request "projects/" %}" href="{% url "kg_project_list" %}?status=1">Projects</a></li>
       <li><a class="{% active request "usage/" %}" href="{% url "kg_usage_list" %}">Usage</a></li>
       <li><a class="{% active request "institutes/" %}" href="{% url "kg_institute_list" %}">Institutes</a></li>
       <li><a class="{% active request "machines/" %}" href="{% url "kg_machine_list" %}">Machines</a></li>
       <li><a class="{% active request "software/" %}" href="{% url "kg_software_list" %}">Software</a></li>
       <li><a class="{% active request "pbs/" %}" href="{% url "pbs_server_list" %}">PBS Servers</a></li>
-      <li><a class="{% active request "lgroups/" %}" href="{% url "plac_group_list" %}">LDAP Groups</a></li>
       <li><a class="{% active request "emails/" %}" href="{% url "kg_emails_index" %}">Send Email</a></li>
       <li><a class="{% active request "misc/" %}" href="{% url "kg_misc" %}">Other Stuff</a></li>
       <li><a class="{% active request "applications/" %}" href="{% url "kg_application_list" %}">Applications</a>{% if pending_apps %} ({{ pending_apps.count }}){% endif %}</li>

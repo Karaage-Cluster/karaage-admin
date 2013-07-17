@@ -4,7 +4,6 @@ from django.conf import settings
 from django.contrib.admin.models import LogEntry
 
 import ajax_select.urls
-import placard.views
 
 admin.autodiscover()
 
@@ -15,7 +14,8 @@ urlpatterns = patterns('',
 
     url(r'^search/$', 'karaage.views.search', name='kg_site_search'), 
 
-    url(r'^password/$', placard.views.ChangePassword.as_view(), name='plac_user_password'),
+    url(r'^change_password/$', 'karaage.people.views.user.password_change', name='kg_user_change_password'),
+    url(r'^change_password/done/$', 'karaage.people.views.user.password_change_done', name='kg_user_password_done'),
 
     url(r'^users/', include('karaage.people.urls.admin')),
     url(r'^institutes/', include('karaage.institutes.urls.admin')),

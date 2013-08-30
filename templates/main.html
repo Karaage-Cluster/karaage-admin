@@ -29,7 +29,7 @@
       <li><a class="{% active request "pbs/" %}" href="{% url "pbs_server_list" %}">PBS Servers</a></li>
       <li><a class="{% active request "emails/" %}" href="{% url "kg_emails_index" %}">Send Email</a></li>
       <li><a class="{% active request "misc/" %}" href="{% url "kg_misc" %}">Other Stuff</a></li>
-      <li><a class="{% active request "applications/" %}" href="{% url "kg_application_list" %}">Applications</a>{% if pending_apps %} ({{ pending_apps.count }}){% endif %}</li>
+      <li><a class="{% active request "applications/" %}" href="{% url "kg_application_list" %}">Applications</a>{% if pending_applications %} ({{ pending_applications }}){% endif %}</li>
       {% if user.is_superuser %}
       <li><a href="{% url "admin:index" %}">Admin</a></li>
       {% endif %}

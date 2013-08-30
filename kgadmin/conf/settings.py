@@ -1,6 +1,12 @@
 # Packaged defined Karaage-admin settings
 from karaage.conf.settings import *
 
+AJAX_LOOKUP_CHANNELS = {
+    'person' : ( 'karaage.people.lookups', 'PersonLookup'),
+    'group' : ( 'karaage.people.lookups', 'GroupLookup'),
+    'project' : ( 'karaage.projects.lookups', 'ProjectLookup'),
+}
+
 TEMPLATE_DIRS += (
     "/usr/share/kgadmin/templates",
 )

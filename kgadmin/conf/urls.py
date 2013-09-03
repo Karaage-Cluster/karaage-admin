@@ -8,16 +8,14 @@ import ajax_select.urls
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'karaage.views.admin_index', name='kg_admin_index'),
+    url(r'^$', 'karaage.views.admin_index', name='index'),
 
     url(r'^lookup/', include(ajax_select.urls)),
 
     url(r'^search/$', 'karaage.views.search', name='kg_site_search'), 
 
-    url(r'^change_password/$', 'karaage.people.views.user.password_change', name='kg_user_change_password'),
-    url(r'^change_password/done/$', 'karaage.people.views.user.password_change_done', name='kg_user_password_done'),
-
-    url(r'^users/', include('karaage.people.urls.admin')),
+    url(r'^persons/', include('karaage.people.urls.admin')),
+    url(r'^profile/', include('karaage.people.urls.profile')),
     url(r'^groups/', include('karaage.people.group_urls.admin')),
     url(r'^institutes/', include('karaage.institutes.urls.admin')),
     url(r'^projects/', include('karaage.projects.urls.admin')),
@@ -36,10 +34,6 @@ urlpatterns = patterns('',
     url(r'^xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc',),
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),                   
-
-    url(r'^accounts/login/$', 'django.contrib.auth.views.login', name='login'),
-    url(r'^accounts/logout/$', 'django.contrib.auth.views.logout', name='logout'),
-
 )
 
 log_dict = {

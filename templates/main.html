@@ -18,7 +18,7 @@
     {% load common %}
     <h2>Quick links</h2>
     <ul>
-      <li><a class="{% active request "$" %}" href="{% url "kg_admin_index" %}">Home</a></li>
+      <li><a class="{% active request "$" %}" href="{% url "index" %}">Home</a></li>
       <li><a class="{% active request "users/" %}" href="{% url "kg_user_list" %}?status=1">Users</a></li>
       <li><a class="{% active request "groups/" %}" href="{% url "kg_group_list" %}">Groups</a></li>
       <li><a class="{% active request "projects/" %}" href="{% url "kg_project_list" %}?status=1">Projects</a></li>

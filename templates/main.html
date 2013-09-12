@@ -19,7 +19,7 @@
     <h2>Quick links</h2>
     <ul>
       <li><a class="{% active request "$" %}" href="{% url "index" %}">Home</a></li>
-      <li><a class="{% active request "users/" %}" href="{% url "kg_user_list" %}?status=1">Users</a></li>
+      <li><a class="{% active request "persons/" %}" href="{% url "kg_person_list" %}?status=1">People</a></li>
       <li><a class="{% active request "groups/" %}" href="{% url "kg_group_list" %}">Groups</a></li>
       <li><a class="{% active request "projects/" %}" href="{% url "kg_project_list" %}?status=1">Projects</a></li>
       <li><a class="{% active request "usage/" %}" href="{% url "kg_usage_list" %}">Usage</a></li>
@@ -30,9 +30,6 @@
       <li><a class="{% active request "emails/" %}" href="{% url "kg_emails_index" %}">Send Email</a></li>
       <li><a class="{% active request "misc/" %}" href="{% url "kg_misc" %}">Other Stuff</a></li>
       <li><a class="{% active request "applications/" %}" href="{% url "kg_application_list" %}">Applications</a>{% if pending_applications %} ({{ pending_applications }}){% endif %}</li>
-      {% if user.is_superuser %}
-      <li><a href="{% url "admin:index" %}">Admin</a></li>
-      {% endif %}
     </ul>
   </div>
   {% block sidebar_extra %}

@@ -1,18 +1,14 @@
 from django.conf.urls import *
-from django.contrib import admin
 from django.conf import settings
-from django.contrib.admin.models import LogEntry
 
 import ajax_select.urls
 
-admin.autodiscover()
-
 urlpatterns = patterns('',
-    url(r'^$', 'karaage.views.admin_index', name='index'),
+    url(r'^$', 'karaage.admin.views.admin_index', name='index'),
+    url(r'^search/$', 'karaage.admin.views.search', name='kg_site_search'),
+    url(r'^misc/$', 'karaage.admin.views.misc', name='kg_misc'),
 
     url(r'^lookup/', include(ajax_select.urls)),
-
-    url(r'^search/$', 'karaage.views.search', name='kg_site_search'), 
 
     url(r'^persons/', include('karaage.people.urls.admin')),
     url(r'^profile/', include('karaage.people.urls.profile')),
@@ -29,29 +25,16 @@ urlpatterns = patterns('',
     url(r'^applications/', include('karaage.applications.urls.admin')),
 
     url(r'^comments/', include('django.contrib.comments.urls')),
-    url(r'^pbs/', include('django_pbs.servers.urls')),                  
-    url(r'^misc/$', 'karaage.legacy.simple.direct_to_template', {'template': 'misc/index.html'}, name='kg_misc'),
+    url(r'^pbs/', include('django_pbs.servers.urls')),
     url(r'^xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc',),
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^admin/', include(admin.site.urls)),                   
+
+    url(r'^logs/$', 'karaage.admin.views.log_list', name='kg_log_list'),
 )
-
-log_dict = {
-    'queryset': LogEntry.objects.select_related(),
-    'paginate_by': 50,
-    'template_name': 'log_list.html',
-    'template_object_name': 'log',
-}
-
-urlpatterns += patterns('karaage.legacy.list_detail',
-    url(r'^logs/$', 'object_list', log_dict, name='kg_log_list'),
-)
-
 
 if settings.DEBUG:
     urlpatterns += patterns('',
         (r'^kgadmin_media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
         (r'^karaage_graphs/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.GRAPH_ROOT}),
-    )		
+    )
 
 execfile("/etc/karaage/admin_urls.py")

@@ -6,6 +6,8 @@ from django.conf import settings
 from django.core.urlresolvers import get_script_prefix
 from django.contrib.auth.views import redirect_to_login
 
+from karaage.people.models import Person
+
 class StaffOnly(object):
     def process_request(self, request):
         # AuthenticationMiddleware is required so that request.user exists.
@@ -17,9 +19,6 @@ class StaffOnly(object):
                 " 'django.contrib.auth.middleware.AuthenticationMiddleware'"
                 " before the StaffOnly class.")
 
-        if request.user.is_staff:
-            return None
-
         if request.path == settings.LOGIN_URL:
             return None
 
@@ -29,12 +28,17 @@ class StaffOnly(object):
         if request.path == "%sxmlrpc/" % get_script_prefix():
             return None
 
+        if request.user.is_authenticated():
+            person = request.user.get_profile()
+            if person.is_admin:
+                return None
+
         if settings.DEBUG:
             prefix = os.path.commonprefix( [ request.path, settings.STATIC_URL ] )
             if prefix == settings.STATIC_URL:
                 return None
 
         if not request.user.is_authenticated():
-            return redirect_to_login(request.path)
+            return redirect_to_login(request.path, login_url='login')
 
         return HttpResponseForbidden('<h1>Access Denied</h1>')

@@ -22,8 +22,6 @@ LOGIN_URL="/kgadmin/profile/login/"
 
 TEMPLATE_CONTEXT_PROCESSORS += ('karaage.context_processors.admin',)
 
-MIDDLEWARE_CLASSES += ('kgadmin.middleware.StaffOnly',)
-
 USAGE_IS_PUBLIC = True
 
 execfile("/etc/karaage/admin_settings.py")

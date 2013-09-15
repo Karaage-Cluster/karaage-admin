@@ -20,11 +20,9 @@ urlpatterns = patterns('',
     url(r'^software/', include('karaage.software.urls.admin')),
     url(r'^projectreports/', include('karaage.projectreports.urls.admin')),
     url(r'^surveys/', include('django_surveys.urls')),
-    url(r'^pbsmoab/', include('karaage.pbsmoab.urls')),
     url(r'^emails/', include('karaage.emails.urls')),
     url(r'^applications/', include('karaage.applications.urls.admin')),
 
-    url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^pbs/', include('django_pbs.servers.urls')),
     url(r'^xmlrpc/$', 'django_xmlrpc.views.handle_xmlrpc',),
 

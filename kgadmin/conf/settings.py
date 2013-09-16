@@ -20,7 +20,7 @@ STATIC_URL = '/kgadmin_media/'
 
 LOGIN_URL="/kgadmin/profile/login/"
 
-TEMPLATE_CONTEXT_PROCESSORS += ('karaage.context_processors.admin',)
+TEMPLATE_CONTEXT_PROCESSORS += ('karaage.common.context_processors.admin',)
 
 USAGE_IS_PUBLIC = True
 

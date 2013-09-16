@@ -1,50 +1,52 @@
 {% extends "main.html" %}
 {% load url from future %}
-{% load common %}
 {% block title %}Home{% endblock %}
+
 
 {% block content_title %}Welcome {{ user.get_full_name }}{% endblock %}
 
+
 {% block sidebar_extra %}
 {% if user.is_authenticated %}
-		<div class="module">
-        <h2>Recent Actions</h2>
-        <h3>My Actions <a href="{% url "kg_log_list" %}">View All</a></h3>
-			 <ul class="plainlist">
-            	{% for action in recent_actions %}
-            	{% spaceless %}
-            	<li class=
-            	{% if action.is_addition %}"addlink"{% endif %}
-            	{% if action.is_change %}"changelink"{% endif %}
-					{% if action.is_deletion %}"deletelink"{% endif %}
-             	>
-		{{ action.object_repr }}
-		<br /><span class="mini quiet">{{ action.content_type }}</span></li>
-             	{% endspaceless %}
-            	{% endfor %}
-            </ul>
-    </div>
-    {% endif %}
+<div class="module">
+    <h2>Recent Actions</h2>
+    <h3>My Actions <a href="{% url "kg_log_list" %}">View All</a></h3>
+    <ul class="plainlist">
+        {% for action in recent_actions %}
+        {% spaceless %}
+        <li class=
+        {% if action.is_addition %}"addlink"{% endif %}
+        {% if action.is_change %}"changelink"{% endif %}
+        {% if action.is_deletion %}"deletelink"{% endif %}
+        >
+        {{ action.object_repr }}
+        <br /><span class="mini quiet">{{ action.content_type }}</span></li>
+        {% endspaceless %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
 {% endblock %}
+
 
 {% block content %}
 <div id="content-main">
-    	
-{% if pending_apps %}
-<ul class="messagelist">
-	<li>There are <a href="{% url "kg_application_list" %}?state=K">pending applications</a> that require admin approval.</li>
-</ul>
-{% endif %}
 
-	<div class="module">
-   	<h2>Newest Users</h2>
-    	{% gen_table newest_users %}
-	</div>
-	<div class="module">
-   	<h2>Newest Projects</h2>
-    	{% gen_table newest_projects %}
-    	
-	</div>
-	
+    {% if pending_apps %}
+    <ul class="messagelist">
+        <li>There are <a href="{% url "kg_application_list" %}?state=K">pending applications</a> that require admin approval.</li>
+    </ul>
+    {% endif %}
+
+    <div class="module">
+        <h2>Newest Users</h2>
+        {% gen_table newest_users %}
+    </div>
+
+    <div class="module">
+        <h2>Newest Projects</h2>
+        {% gen_table newest_projects %}
+    </div>
+
 </div>
 {% endblock %}

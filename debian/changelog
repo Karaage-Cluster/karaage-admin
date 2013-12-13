@@ -1,3 +1,10 @@
+karaage-admin (1.4.4-1) unstable; urgency=low
+
+  * Don't use kg-manage in postinst.
+  * Update for Django 1.5.
+
+ -- Brian May <bam@debian.org>  Fri, 13 Dec 2013 14:22:14 +1100
+
 karaage-admin (1.4.3-1) unstable; urgency=low
 
   * Use triggers for db migration.

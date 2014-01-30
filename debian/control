@@ -10,6 +10,7 @@ Package: karaage3-admin
 Architecture: all
 Homepage: https://github.com/Karaage-Cluster/karaage
 Depends: ${misc:Depends}, ${python:Depends}, karaage3 (>= 3.0.1)
+Suggests: libapache2-mod-wsgi, python-mysqldb | python-psycopg2
 Breaks: karaage-registration (<< 3.0.0)
 Replaces: karaage-registration (<< 3.0.0)
 Description: Admin interface to karaage

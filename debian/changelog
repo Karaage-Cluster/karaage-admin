@@ -1,3 +1,9 @@
+karaage3-admin (3.0.1-1) unstable; urgency=low
+
+  * Modifications to work with Karaage 3.0.1
+
+ -- Brian May <bam@debian.org>  Thu, 30 Jan 2014 15:33:59 +1100
+
 karaage3-admin (3.0.0-1) unstable; urgency=low
 
   * Modifications to work with Karaage 3.0.0

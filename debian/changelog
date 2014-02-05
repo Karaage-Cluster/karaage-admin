@@ -1,3 +1,11 @@
+karaage3-admin (3.0.2-1) unstable; urgency=low
+
+  * Modifications to work with Karaage 3.0.2
+  * Add suggests header to package.
+  * Add cron.d file.
+
+ -- Brian May <bam@debian.org>  Wed, 05 Feb 2014 11:10:32 +1100
+
 karaage3-admin (3.0.1-1) unstable; urgency=low
 
   * Modifications to work with Karaage 3.0.1

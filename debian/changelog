@@ -1,3 +1,9 @@
+karaage3-admin (3.0.3-1) unstable; urgency=low
+
+  * Move more code to karaage package.
+
+ -- Brian May <bam@debian.org>  Mon, 24 Feb 2014 15:28:31 +1100
+
 karaage3-admin (3.0.2-1) unstable; urgency=low
 
   * Modifications to work with Karaage 3.0.2

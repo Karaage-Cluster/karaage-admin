@@ -1,4 +1,4 @@
-# Copyright 2007-2010 VPAC
+# Copyright 2007-2014 VPAC
 #
 # This file is part of Karaage.
 #
@@ -16,7 +16,7 @@
 # along with Karaage  If not, see <http://www.gnu.org/licenses/>.
 
 
-VERSION = (3, 0, 2, 'final', 0)
+VERSION = (3, 0, 3, 'final', 0)
 
 def get_version():
     """ Return the current version"""

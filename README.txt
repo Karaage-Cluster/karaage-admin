@@ -1,1 +1,0 @@
-Please see http://trac.vpac.org/karaage/

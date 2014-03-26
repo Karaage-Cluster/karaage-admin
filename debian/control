@@ -9,7 +9,7 @@ X-Python-Version: >= 2.6
 
 Package: karaage3-admin
 Architecture: all
-Depends: ${misc:Depends}, ${python:Depends}, karaage3 (>= 3.0.3)
+Depends: ${misc:Depends}, ${python:Depends}, python-karaage (>= 3.0.3)
 Suggests: libapache2-mod-wsgi, python-mysqldb | python-psycopg2
 Breaks: karaage-registration (<< 3.0.0)
 Replaces: karaage-registration (<< 3.0.0)

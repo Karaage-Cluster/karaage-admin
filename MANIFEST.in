@@ -3,5 +3,4 @@ include *.py
 include MANIFEST.in
 include pylint.conf
 recursive-include man *
-recursive-include sbin *
 recursive-include scripts *

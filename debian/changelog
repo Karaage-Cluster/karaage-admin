@@ -1,3 +1,9 @@
+karaage3-admin (3.0.5-1) unstable; urgency=low
+
+  * Move management commands to karaage package.
+
+ -- Brian May <bam@debian.org>  Tue, 01 Apr 2014 11:44:34 +1100
+
 karaage3-admin (3.0.4-1) unstable; urgency=low
 
   * Update packaging to use setuptools.

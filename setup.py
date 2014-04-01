@@ -43,7 +43,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules"
     ],
     keywords="karaage cluster user administration",
-    scripts=['sbin/kg-manage', 'sbin/kg-daily-cleanup'],
     data_files=[
         ('/etc/karaage', [
             'conf/admin_settings.py',

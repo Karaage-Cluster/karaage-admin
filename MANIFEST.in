@@ -2,5 +2,4 @@ include *.txt
 include *.py
 include MANIFEST.in
 include pylint.conf
-recursive-include man *
-recursive-include scripts *
+recursive-include conf *

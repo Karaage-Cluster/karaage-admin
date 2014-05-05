@@ -1,3 +1,9 @@
+karaage3-admin (3.0.6-1) unstable; urgency=low
+
+  * Triggers for static files.
+
+ -- Brian May <bam@debian.org>  Mon, 05 May 2014 12:43:30 +1000
+
 karaage3-admin (3.0.5-1) unstable; urgency=low
 
   * Move management commands to karaage package.

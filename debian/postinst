@@ -4,5 +4,14 @@ set -e
 #DEBHELPER#
 
 if [ "$1" = "configure" ]; then
-    django-admin collectstatic --settings=kgadmin.conf.settings --noinput
+    if [ ! -d "/var/lib/karaage-admin/static" ]; then
+        django-admin collectstatic --settings=kgadmin.conf.settings --noinput
+    fi
 fi
+
+if [ "$1" = "triggered" ]; then
+    if [ "$2" = "karaage-static" ]; then
+        django-admin collectstatic --settings=kgadmin.conf.settings --noinput
+    fi
+fi
+

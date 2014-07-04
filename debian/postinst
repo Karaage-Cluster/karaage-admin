@@ -5,13 +5,15 @@ set -e
 
 if [ "$1" = "configure" ]; then
     if [ ! -d "/var/lib/karaage-admin/static" ]; then
-        django-admin collectstatic --settings=kgadmin.conf.settings --noinput
+        python2.7 /usr/lib/python2.7/dist-packages/django/bin/django-admin.py \
+            collectstatic --settings=kgadmin.conf.settings --noinput
     fi
 fi
 
 if [ "$1" = "triggered" ]; then
     if [ "$2" = "karaage-static" ]; then
-        django-admin collectstatic --settings=kgadmin.conf.settings --noinput
+        python2.7 /usr/lib/python2.7/dist-packages/django/bin/django-admin.py \
+            collectstatic --settings=kgadmin.conf.settings --noinput
     fi
 fi
 
